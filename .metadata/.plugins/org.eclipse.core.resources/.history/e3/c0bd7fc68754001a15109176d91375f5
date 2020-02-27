@@ -1,0 +1,39 @@
+package com.Tests;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import com.Locators_Testdata.Testdata;
+import com.Tests.*;
+import com.Locators.Locators;
+
+public class Titan_Repository {
+	
+	public  WebDriver driver;
+	
+	public void browserlaunch() {
+		
+		//System.setProperty("webdriver.chrome.driver", "\\src\\main\\java\\drivers\\chromedriver.exe"); 
+				driver = new ChromeDriver();
+				driver.manage().window().maximize();
+       
+	  } 
+	  
+	public void URL() throws InterruptedException {
+			
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://google.com/");
+		Thread.sleep(2000);
+		System.out.println(driver.getCurrentUrl());		
+		System.out.println(driver.getTitle());		
+	}	
+	   
+     public void browserclose() {
+    	 driver.close();
+    	 driver.quit();
+     }
+}

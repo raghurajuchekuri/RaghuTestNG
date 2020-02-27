@@ -1,0 +1,19 @@
+package com.Tests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class testngnew {
+	
+@Test
+public void newsamplw() {
+	//WebDriver driver = new ChromeDriver();
+	driver.get("http://google.com/");
+	String pageTitle = driver.getTitle();
+	Assert.assertEquals(pageTitle, "Google");
+	driver.close();
+}
+
+}

@@ -1,0 +1,115 @@
+package com.Tests;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.Locators_Testdata.Testdata;
+import com.Tests.*;
+import com.Locators.Locators;
+
+public class Titan_Repository {
+	
+	public  WebDriver driver;
+	
+	public void browserlaunch() {
+		
+		System.setProperty("webdriver.chrome.driver", ""); 
+				driver = new ChromeDriver();
+       
+	  } 
+	  
+		public void URL() throws InterruptedException{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://google.com/");	  
+		driver.manage().window().maximize();	  	 
+		Thread.sleep(2000);
+		System.out.println(driver.getCurrentUrl());		
+		System.out.println(driver.getTitle());	
+				  		}
+	
+	public void navigate_to_nonaca_plans() {
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div/div/div/a")).click();
+		String windowHandle = driver.getWindowHandle();
+		ArrayList tabs = new ArrayList (driver.getWindowHandles());
+		driver.switchTo().window((String) tabs.get(1));
+		String Url = driver.getCurrentUrl();
+		System.out.println(Url);		
+	}
+	
+	public void non_aca_zipcode() {
+		//driver.findElement(Locators_NON_ACA.Zipcode).sendKeys(Testdata.zipcode);
+		driver.findElement(Locators.Zipcode).sendKeys(Testdata.zipcode);
+	}
+		
+	public void effective_start_date() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		Select month = new Select(driver.findElement(By.id("MM")));
+		month.selectByIndex(12);
+		Select day = new Select(driver.findElement(By.id("DD")));
+		day.selectByValue("28");	
+		Select year = new Select(driver.findElement(By.id("YYYY")));
+		year.selectByValue("2019");	
+	
+		}
+
+     public void dob() throws InterruptedException {
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	driver.findElement(Locators.dob).sendKeys(Testdata.dob); 
+      	driver.findElement(Locators.dob).click();
+    	driver.findElement(Locators.dob).sendKeys(Keys.ENTER);    
+    	System.out.println("Accepted the date"); 
+    	
+    
+     }
+     
+     public void gender() {
+    	 driver.findElement(Locators.gender).click();    	  	 
+     }
+     
+     public void tabacouse() {
+    	 driver.findElement(Locators.tobacouse).click();
+     }
+     
+     public void height() throws InterruptedException {
+    	 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	 driver.findElement(Locators.heightfeet).sendKeys(Testdata.heightft);
+    	 driver.findElement(Locators.heightinch).sendKeys(Testdata.heightinch);
+    	 }
+     
+     public void weight() {
+    	 driver.findElement(Locators.weight).sendKeys(Testdata.weight);
+     }
+     
+     public void apply() throws InterruptedException {
+    	 driver.findElement(Locators.apply).click();
+    	 System.out.println("Filled all the fields and applied");
+    	 Thread.sleep(5000);
+     }
+     
+     public void planselection() {
+    	 
+ 			 driver.findElement(By.xpath("//button[contains(@class,'btn btn-one')][1]")).click();
+ 			
+ 		}
+        
+     public void startapplicationbtn() {
+    	//driver.findElement(Locators_Planselection.startapplication).click(); 
+    	driver.findElement(By.xpath("//button[contains(@class,'btn btn-one w-100')]")).click();
+    	driver.findElement(By.xpath("//*[@id=\"nav-hometab\"]/div/div/div/a/div[1]/div/div[3]/button")).click();
+    	
+    	     }
+     
+     public void browserclose() {
+    	 driver.close();
+    	 driver.quit();
+     }
+}

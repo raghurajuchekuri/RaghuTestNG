@@ -1,0 +1,29 @@
+package com.Locators;
+
+import org.openqa.selenium.By;
+
+public class Locators_NON_ACA {
+	
+	public static By Zipcode = By.xpath("/html/body/app-root/app-non-acaplan-filters/div[1]/div/form/div/div/div[2]/div/div[1]/div[1]/input");
+
+	public static By dob = By.xpath("//*[@id=\"collapseExample\"]/div[1]/div[1]/p-calendar/span/input");
+	
+	public static By gender = By.xpath("//label[contains(@for,'Male1')]");
+	
+	public static By tobacouse = By.xpath("//label[contains(@for,'Tobacco-no1')]");
+	
+	public static By heightfeet = By.name("Applicanthtft");
+	
+	public static By heightinch = By.xpath("//input[contains(@ng-reflect-name,'ApplicanthtIn')]");
+	
+	public static By weight = By.name("Applicantweight");
+	
+	public static By apply = By.xpath("//button[contains(@class,'btn btn-one mx-auto col-6 form-input  mt-4  ')]");
+	
+	
+	
+	
+	
+	
+	
+}

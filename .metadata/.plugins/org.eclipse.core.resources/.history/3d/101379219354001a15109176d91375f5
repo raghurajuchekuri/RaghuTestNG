@@ -1,0 +1,16 @@
+package com.Locators_Testdata;
+
+public class Testdata {
+	
+	public static String zipcode = "59001";
+	
+	public static String dob = "11/28/1983";
+	
+	public static String heightft = "5";
+	
+	public static String heightinch = "8";
+	
+	public static String weight = "55";
+	
+
+}

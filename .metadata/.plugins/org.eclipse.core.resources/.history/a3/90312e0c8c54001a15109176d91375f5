@@ -1,0 +1,52 @@
+package com.Tests;
+
+import java.util.ArrayList;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class TitanWeb extends Titan_Repository{
+	
+	//@Parameters("browser")
+	
+	@BeforeClass	
+	public void launchbrowser(){
+		
+		browserlaunch();
+	System.out.println("Browser has launched succesfully before Test");
+	}
+		
+	@Test(priority=1, description = "Login Page" ,enabled=true)
+	public void navigateandvalidateTitle() throws InterruptedException{
+		navigatetoSite();
+		
+	}
+	
+	@Test (priority = 2, description = "verify the registry page" ,enabled=true)
+	public void validation() {
+	String pageurl = driver.getCurrentUrl();
+	System.out.println("This is present URL:: " + pageurl);
+	Assert.assertEquals(pageurl, "http://montana-dev.accesshealthcarenow.com/montanahn/NonACAPlans");	
+	System.out.println("Successfully validation passed: Actual is equal to expected");
+	}
+	
+	
+	
+	
+	@AfterClass
+	public void closebrowser() {
+		browserclose();
+	}
+	
+	
+}

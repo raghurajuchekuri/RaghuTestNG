@@ -1,0 +1,23 @@
+package com.Locators;
+
+import org.openqa.selenium.By;
+
+public class Locators {
+	
+	public static By userid = By.id("Email");
+
+	public static By password = By.xpath("//*[@id=\"collapseExample\"]/div[1]/div[1]/p-calendar/span/input");
+	
+	
+	
+	public static By weight = By.name("Applicantweight");
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,50 @@
+package com.Tests;
+
+import java.util.ArrayList;
+
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.BrowserType;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class TitanWeb extends Titan_Repository{
+	
+	//@Parameters("browser")	
+	@BeforeClass	
+	public void launchbrowser(){
+		
+		browserlaunch();
+		System.out.println("Browser has launched succesfully before Test");
+	}
+	
+		
+	@Test(priority=1, description = "Login page loaded" ,enabled=true)
+	public void navigatetoWebsite() throws InterruptedException{
+		navigatetoSite();
+		
+	}
+	
+	
+	@Test (priority = 2, description = "verify the Title" ,enabled=true)
+	public void validation() throws InterruptedException {			
+		
+		validateTitle();
+	
+	}
+		
+	
+	@AfterClass
+	public void closebrowser() {
+		browserclose();
+	}
+	
+	
+}
