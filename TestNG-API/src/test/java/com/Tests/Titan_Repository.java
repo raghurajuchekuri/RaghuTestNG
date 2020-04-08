@@ -35,7 +35,7 @@ public class Titan_Repository {
 	
 	public void validateTitle() throws InterruptedException {				
 		
-		System.out.println(driver.getTitle());
+		//System.out.println(driver.getTitle());
 		Assert.assertEquals(driver.getTitle(),"Titan Lien Services – Lien Processing");
 						
 	}	
@@ -44,10 +44,10 @@ public class Titan_Repository {
 		
 		driver.findElement(LocatorsLogin.userid).sendKeys(Testdata.userid);
 		driver.findElement(LocatorsLogin.password).sendKeys(Testdata.pasword);
-		driver.findElement(LocatorsLogin.btn_login).click();
-		driver.findElement(LocatorsLogin.dashboard_link).isDisplayed();	
-		System.out.println(driver.findElement(LocatorsLogin.dashboard_link).isDisplayed());
+		driver.findElement(LocatorsLogin.btn_login).click();		
+		driver.findElement(LocatorsLogin.dashboard_link).isDisplayed();			
 		Assert.assertEquals(driver.findElement(LocatorsLogin.dashboard_link).isDisplayed(),true);
+		Thread.sleep(5000);
 						
 	}	
 	

@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
   <test thread-count="5" name="sample(failed)">
     <classes>
-      <class name="com.Tests.Snapdeal">
+      <class name="com.Tests.TitanWeb">
         <methods>
-          <include name="navigatetoWebandvalidateTitle"/>
-          <include name="closebrowser"/>
           <include name="launchbrowser"/>
+          <include name="navigatetoWebandvalidateTitle"/>
+          <include name="login"/>
+          <include name="closebrowser"/>
         </methods>
-      </class> <!-- com.Tests.Snapdeal -->
+      </class> <!-- com.Tests.TitanWeb -->
     </classes>
   </test> <!-- sample(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

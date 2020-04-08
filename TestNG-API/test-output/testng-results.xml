@@ -1,41 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
-      <![CDATA[<br><img src='\test-output\Screenshots\1583924624568_.png' height='400' width='700'/><br>]]>
+      <![CDATA[<br><img src='\test-output\Screenshots\1584543666675_.png' height='400' width='700'/><br>]]>
     </line>
     <line>
       <![CDATA[Screenshot Capture is done]]>
     </line>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="48675" started-at="2020-03-11T16:33:03 IST" finished-at="2020-03-11T16:33:52 IST">
+  <suite name="TestSuite" duration-ms="38286" started-at="2020-03-18T20:30:41 IST" finished-at="2020-03-18T20:31:20 IST">
     <groups>
     </groups>
-    <test name="sample" duration-ms="48675" started-at="2020-03-11T16:33:03 IST" finished-at="2020-03-11T16:33:52 IST">
+    <test name="sample" duration-ms="38286" started-at="2020-03-18T20:30:41 IST" finished-at="2020-03-18T20:31:20 IST">
       <class name="com.Tests.TitanWeb">
-        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:com.Tests.TitanWeb@5ed828d]" name="launchbrowser" is-config="true" duration-ms="11674" started-at="2020-03-11T16:33:03 IST" finished-at="2020-03-11T16:33:15 IST">
+        <test-method status="PASS" signature="launchbrowser()[pri:0, instance:com.Tests.TitanWeb@50d0686]" name="launchbrowser" is-config="true" duration-ms="10317" started-at="2020-03-18T20:30:41 IST" finished-at="2020-03-18T20:30:52 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchbrowser -->
-        <test-method status="PASS" signature="navigatetoWebandvalidateTitle()[pri:1, instance:com.Tests.TitanWeb@5ed828d]" name="navigatetoWebandvalidateTitle" duration-ms="29485" started-at="2020-03-11T16:33:15 IST" description="Title Validation" finished-at="2020-03-11T16:33:44 IST">
+        <test-method status="PASS" signature="navigatetoWebandvalidateTitle()[pri:1, instance:com.Tests.TitanWeb@50d0686]" name="navigatetoWebandvalidateTitle" duration-ms="14533" started-at="2020-03-18T20:30:52 IST" description="Title Validation" finished-at="2020-03-18T20:31:06 IST">
           <reporter-output>
             <line>
-              <![CDATA[<br><img src='\test-output\Screenshots\1583924624568_.png' height='400' width='700'/><br>]]>
+              <![CDATA[<br><img src='\test-output\Screenshots\1584543666675_.png' height='400' width='700'/><br>]]>
             </line>
             <line>
               <![CDATA[Screenshot Capture is done]]>
             </line>
           </reporter-output>
         </test-method> <!-- navigatetoWebandvalidateTitle -->
-        <test-method status="PASS" signature="login()[pri:2, instance:com.Tests.TitanWeb@5ed828d]" name="login" duration-ms="6760" started-at="2020-03-11T16:33:44 IST" description="Login Sucessful" finished-at="2020-03-11T16:33:51 IST">
+        <test-method status="PASS" signature="login()[pri:2, instance:com.Tests.TitanWeb@50d0686]" name="login" duration-ms="7205" started-at="2020-03-18T20:31:06 IST" description="Login Sucessful" finished-at="2020-03-18T20:31:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="closebrowser()[pri:0, instance:com.Tests.TitanWeb@5ed828d]" name="closebrowser" is-config="true" duration-ms="706" started-at="2020-03-11T16:33:51 IST" finished-at="2020-03-11T16:33:52 IST">
+        <test-method status="PASS" signature="closebrowser()[pri:0, instance:com.Tests.TitanWeb@50d0686]" name="closebrowser" is-config="true" duration-ms="680" started-at="2020-03-18T20:31:13 IST" finished-at="2020-03-18T20:31:14 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
       </class> <!-- com.Tests.TitanWeb -->
+      <class name="com.Tests.TitanAPI">
+        <test-method status="PASS" signature="getAccesscode()[pri:0, instance:com.Tests.TitanAPI@7a3d45bd]" name="getAccesscode" duration-ms="3158" started-at="2020-03-18T20:31:14 IST" description="1. OAUTH Salesforce login service URL and Parameters" finished-at="2020-03-18T20:31:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccesscode -->
+        <test-method status="PASS" signature="createLeadinSF()[pri:1, instance:com.Tests.TitanAPI@7a3d45bd]" name="createLeadinSF" duration-ms="2343" started-at="2020-03-18T20:31:17 IST" description="2. POST Customer Sign Up: Create Lead in SF" finished-at="2020-03-18T20:31:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLeadinSF -->
+      </class> <!-- com.Tests.TitanAPI -->
     </test> <!-- sample -->
   </suite> <!-- TestSuite -->
 </testng-results>

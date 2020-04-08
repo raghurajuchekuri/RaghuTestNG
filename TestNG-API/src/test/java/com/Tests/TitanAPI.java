@@ -25,12 +25,12 @@ public class TitanAPI {
 		 Assert.assertEquals(statusCode, 200);
 		 
 		 access_token = response.jsonPath().get("access_token");
-		 System.out.println(access_token);	
+		 System.out.println("Acess Code: "+ access_token);	
 	}
 	
 	
 	
-	@Test (priority=1, enabled=false, description = "2. POST Customer Sign Up: Create Lead in SF")
+	@Test (priority=1, enabled=true, description = "2. POST Customer Sign Up: Create Lead in SF")
 	public void createLeadinSF()	{ 
 		
 		RestAssured.baseURI ="https://billdco123--titan.my.salesforce.com/";
@@ -42,15 +42,15 @@ public class TitanAPI {
 		 
 		 JSONObject requestParams = new JSONObject();
 		 requestParams.put("RecordTypeId","012f4000000JhjmAAC"); 
-		 requestParams.put("Company","Stic rr Lead");
+		 requestParams.put("Company","Stic R Lead");
 		 requestParams.put("DBA__c","working as dba");
 		 requestParams.put("Street","dsf Street");	 
 		 requestParams.put("City","Hyderabad");
 		 requestParams.put("PostalCode","89030");
 		 requestParams.put("Phone","1234567890");
-		 requestParams.put("FirstName","eff");
-		 requestParams.put("LastName","ewrw");
-		 requestParams.put("Email","dfsffs@gmail.com");
+		 requestParams.put("FirstName","Raghu");
+		 requestParams.put("LastName","Chekuri");
+		 requestParams.put("Email","raghurajuchekuri@gmail.com");
 		 requestParams.put("Lead_Type__c","Licensed Contractor");	 
 		 requestParams.put("LeadSource","Lien Seminar");
 		 requestParams.put("Accepted_TitanLien_Service_Agreement__c",true); 		
@@ -61,9 +61,9 @@ public class TitanAPI {
 		 int statusCode = response.getStatusCode();
 		 Assert.assertEquals(statusCode, 201);
 		 
-		 boolean successStatus = response.jsonPath().get("success");
-		 System.out.println(successStatus);
+		 boolean successStatus = response.jsonPath().get("success");		 
 		 Assert.assertEquals( successStatus, true);
+		 System.out.println("Status Response is: "+successStatus);
 	}
 
 

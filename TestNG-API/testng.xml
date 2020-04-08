@@ -6,7 +6,7 @@
   <test name="sample" >
     <classes>      
        <class name="com.Tests.TitanWeb" />    
-<!--        <class name="com.Tests.TitanAPI" />  -->
+       <class name="com.Tests.TitanAPI" /> 
 <!--        <class name="com.Tests.Snapdeal" />    -->
     </classes>
   </test> 
